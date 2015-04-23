@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="QRC_phase1\QRC_phase1.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="QRC_phase1\MessageInputActivity.cs">
+    <Files>
+      <File FileName="QRC_phase1\Resources\Resource.designer.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Resources\values\Strings.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\BitmapHelpers.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\FinishActivity.cs" Line="1" Column="1" NotebookId="1" />
+    </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="-32000" Y="-32000" Width="1345" Height="1041">
+        <Files>
+          <File FileName="QRC_phase1\MainActivity.cs" Line="57" Column="40" />
+          <File FileName="QRC_phase1\MessageInputActivity.cs" Line="165" Column="67" />
+          <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="379" Column="14" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.QRC__phase1 MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>

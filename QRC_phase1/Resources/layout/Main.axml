@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingTop="400dp"
+    android:paddingRight="16dp">
+    <Button
+        android:id="@+id/buttonScanDefaultView"
+        android:text="Start scanning!"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="14"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

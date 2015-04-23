@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="URL Retrieved:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scannedResultId"
+        android:text="@string/scannedResult" />
+    <TextView
+        android:text="Enter Message:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/MessageBoxHeader" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageBox" />
+    <ScrollView
+        android:id="@+id/ScrlView"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp">
+        <LinearLayout
+            android:id="@+id/layoutForScroll"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Add Picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addPictureBut" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:text="UPLOAD"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/DoneBut"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:enabled="false" />
+</LinearLayout>
