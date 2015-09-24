@@ -41,23 +41,6 @@ namespace QRC_phase1
 			// and attach an event to it
 			buttonScanDefaultView = FindViewById<Button> (Resource.Id.buttonScanDefaultView);
 
-
-
-
-
-
-//			buttonGetRequest.Click += async delegate(object sender, EventArgs e) {
-//				//string url = "http://jessisgee.com/api/link/abc.com";
-//				//JsonValue json = await FetchResultAsync (url);
-//				//ParseAndDisplay (json);
-//				string postResponse = await HttpPost (
-//					                      "http://tachitnow.com/api/link",
-//					                      new string[5]{ "link_url", "name", "description", "media_type", "user_name" },
-//					                      new string[5]{ "123009", "eddy_test_000", "test_description", "picture", "eddywang" });
-//				responseText.Text = postResponse;
-////				amazonPostUrl = postResponse;
-//			};
-
 			buttonScanDefaultView.Click += async delegate {
 				//Tell our scanner to use the default overlay
 				scanner.UseCustomOverlay = false;

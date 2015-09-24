@@ -1,11 +1,7 @@
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\QRC_phase1.dll
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\QRC_phase1.pdb
-C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\QRC_phase1.dll.mdb
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\QRC_phase1.QRC_phase1.apk
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\QRC_phase1.QRC_phase1-Signed.apk
-C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\AWSSDK_XMOBILE.dll
-C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\System.Net.Http.Primitives.dll
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\QRC_phase1.dll
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\QRC_phase1.pdb
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\android\bin\QRC_phase1.QRC_phase1.apk
@@ -18,7 +14,10 @@ C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\R.cs.flag
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\uploadflags.txt
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\res\drawable\buttonshape.xml
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\QRC_phase1.csprojResolveAssemblyReference.cache
-C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\bin\Debug\Newtonsoft.Json.dll.mdb
+C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\res\layout\customview.xml
+C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\res\menu\popup_menu_media_select.xml
+C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\res\layout\camerainput.xml
+C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\obj\Debug\res\layout\voiceinput.xml
