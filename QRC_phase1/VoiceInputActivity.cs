@@ -86,7 +86,7 @@ namespace QRC_phase1
 			_doneBut.Click += (s, arg) => {
 
 				voiceInputData = new Data (g.ToString (), "voiceTesting", "sound", "eddywang");
-				voiceInputUploadinfo = new UploadInfo (g.ToString (), resultFile.Path);
+				voiceInputUploadinfo = new UploadInfo (g.ToString (), resultFile.Path, "");
 				var intent = new Intent ();
 				intent.PutExtra ("Data", JsonConvert.SerializeObject (voiceInputData));
 				intent.PutExtra ("UploadInfo", JsonConvert.SerializeObject (voiceInputUploadinfo));

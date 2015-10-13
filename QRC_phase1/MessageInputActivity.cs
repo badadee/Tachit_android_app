@@ -21,7 +21,6 @@ using System.Json;
 using Android.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Linq;
 
 namespace QRC_phase1
 {
@@ -54,18 +53,6 @@ namespace QRC_phase1
 			this.media_type = mt;
 			this.user_name = "eddywang";
 		}
-
-		//		public Data (string jsonObj)
-		//		{
-		//
-		////			Object resultJson = JObject.Parse (jsonObj);
-		////			IList<JToken> resultList = resultJson ["result"].ToList ();
-		////			foreach (JToken item in resultList) {
-		////				this = JsonConvert.DeserializeObject<Data> (item.ToString ());
-		////			}
-		//
-		//
-		//		}
 	}
 
 	public class UploadContainer
@@ -95,16 +82,6 @@ namespace QRC_phase1
 			this.uploadFilePath = uploadFilePath;
 			this.presignedUploadURL = presignedUploadURL;
 		}
-		//deserializer
-		//		public UploadInfo (string jsonObj)
-		//		{
-		//			JObject resultJson = JObject.Parse (jsonObj);
-		//			IList<JToken> resultList = resultJson ["result"].ToList ();
-		//			foreach (JToken item in resultList) {
-		//				this = JsonConvert.DeserializeObject<UploadInfo> (item.ToString ());
-		//			}
-		//
-		//		}
 
 
 	}
@@ -135,6 +112,7 @@ namespace QRC_phase1
 		private List<UploadInfo> uploadInfoList = new List<UploadInfo> ();
 		private Button _doneButton;
 		private String amazonPostUrl;
+		private String testID;
 
 		List<TableItem> tableItems = new List<TableItem> ();
 		ListView listView;
@@ -224,7 +202,7 @@ namespace QRC_phase1
 
 				menu.Show ();
 			};
-
+			testID = "1156999";
 			_doneButton.Click += async delegate(object sender, EventArgs e) {
 				string result = await HttpPost (
 					                "http://tachitnow.com/api/link",
@@ -243,7 +221,7 @@ namespace QRC_phase1
 				}
 
 				HandleScanResult ("upload success");
-				var uri = Android.Net.Uri.Parse ("http://tachitnow.com/1126021");
+				var uri = Android.Net.Uri.Parse ("http://tachitnow.com/" + testID);
 				var intent = new Intent (Intent.ActionView, uri); 
 				StartActivity (intent);  
 			};
@@ -252,7 +230,7 @@ namespace QRC_phase1
 
 		private string ConstructRequestArrayFromData ()
 		{
-			UploadContainer UC = new UploadContainer ("1126999", dataList);
+			UploadContainer UC = new UploadContainer (testID, dataList);
 			string ret = JsonConvert.SerializeObject (UC);
 			System.Console.WriteLine (ret);
 			return ret;
@@ -294,7 +272,7 @@ namespace QRC_phase1
 
 		protected void IntentProcessor (Intent intent)
 		{
-			if (intent == null)
+			if (intent == null || intent.GetStringExtra ("MediaSource") == null)
 				return;
 			
 			string returnedMediaSource = intent.GetStringExtra ("MediaSource");

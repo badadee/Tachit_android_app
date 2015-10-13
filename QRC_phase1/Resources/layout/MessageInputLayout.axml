@@ -39,7 +39,7 @@
     <ListView
         android:id="@+id/List"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="313.7dp"
         android:cacheColorHint="#FFDAFF7F"
         android:layout_marginTop="0.0dp" />
     <Button
@@ -49,5 +49,5 @@
         android:id="@+id/DoneBut"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:enabled="false" />
+        android:enabled="true" />
 </LinearLayout>
