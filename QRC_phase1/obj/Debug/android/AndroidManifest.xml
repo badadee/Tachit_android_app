@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="QRC_phase1.QRC_phase1">
-  <uses-sdk android:minSdkVersion="21" />
+  <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="22" />
   <application android:label="QRC_phase1" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="QRC_phase1" android:theme="@android:style/Theme.Holo.Light" android:name="qrc_phase1.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="QRC_phase1" android:theme="@android:style/Theme.Holo.Light" android:name="md520e1443e50ea65d20146b551c5aeae7c.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="MessageInputActivity" android:theme="@android:style/Theme.Holo.Light" android:name="qrc_phase1.MessageInputActivity" />
-    <activity android:label="FinishActivity" android:name="qrc_phase1.FinishActivity" />
-    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="zxing.mobile.ZxingActivity" />
+    <activity android:label="MessageInputActivity" android:theme="@android:style/Theme.Holo.Light" android:name="md520e1443e50ea65d20146b551c5aeae7c.MessageInputActivity" />
+    <activity android:label="FinishActivity" android:name="md520e1443e50ea65d20146b551c5aeae7c.FinishActivity" />
+    <activity android:label="CameraInputActivity" android:name="md520e1443e50ea65d20146b551c5aeae7c.CameraInputActivity" />
+    <activity android:label="VoiceInputActivity" android:name="md520e1443e50ea65d20146b551c5aeae7c.VoiceInputActivity" />
+    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="md5e1d4744ef128cd013cac92521f1a8e76.ZxingActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="QRC_phase1.QRC_phase1.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
@@ -23,5 +25,7 @@
   <uses-permission android:name="android.permission.FLASHLIGHT" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

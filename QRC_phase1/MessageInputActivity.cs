@@ -22,7 +22,6 @@ using Android.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
 namespace QRC_phase1
 {
 	using Java.IO;
@@ -54,7 +53,6 @@ namespace QRC_phase1
 			this.media_type = mt;
 			this.user_name = "eddywang";
 		}
-
 	}
 
 	public class UploadContainer
@@ -84,6 +82,8 @@ namespace QRC_phase1
 			this.uploadFilePath = uploadFilePath;
 			this.presignedUploadURL = presignedUploadURL;
 		}
+
+
 	}
 
 	public class PostResult
@@ -112,7 +112,32 @@ namespace QRC_phase1
 		private List<UploadInfo> uploadInfoList = new List<UploadInfo> ();
 		private Button _doneButton;
 		private String amazonPostUrl;
-		private String uploadFilePath;
+		private String testID;
+
+		List<TableItem> tableItems = new List<TableItem> ();
+		ListView listView;
+
+
+
+		protected override void OnStop ()
+		{
+			base.OnStop ();
+		}
+
+		protected override void OnPause ()
+		{
+			base.OnPause ();
+		}
+
+		protected override void OnDestroy ()
+		{
+			base.OnDestroy ();
+		}
+
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+		}
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -124,10 +149,15 @@ namespace QRC_phase1
 			var scannedResultTextBox = FindViewById<EditText> (Resource.Id.scannedResultId);
 			var addPictureButton = FindViewById<Button> (Resource.Id.addPictureBut);
 			_doneButton = FindViewById<Button> (Resource.Id.DoneBut);
-
+			listView = FindViewById<ListView> (Resource.Id.List);
+			if (listView.Adapter == null) {
+				listView.Adapter = new MessageInputAdapter (this, tableItems);
+			}
 			//get Intent Extra~
 			var scannedResult = Intent.GetStringExtra ("ScannedString");
 			amazonPostUrl = Intent.GetStringExtra ("AmazonPostUrl");
+			IntentProcessor (Intent);
+
 			//display Intent Extra content 
 			scannedResultTextBox.Text = scannedResult;
 
@@ -136,14 +166,43 @@ namespace QRC_phase1
 			if (IsThereAnAppToTakePictures ()) {
 				CreateDirectoryForPictures ();
 
-				Button button = FindViewById<Button> (Resource.Id.addPictureBut);
-//				if (App.bitmap != null) {
-//					newImageView.SetImageBitmap (App.bitmap);
-//					App.bitmap = null;
-//				}
-				button.Click += TakeAPicture;
+				Button _addPhotoButton = FindViewById<Button> (Resource.Id.addPictureBut);
+				_addPhotoButton.Click += TakeAPicture;
 
 			}
+			//add media - spawn menu
+			Button _addMediaButton = FindViewById<Button> (Resource.Id.addMediaBut);
+
+			_addMediaButton.Click += (s, arg) => {
+
+				PopupMenu menu = new PopupMenu (this, _addMediaButton);
+
+				menu.Inflate (Resource.Menu.popup_menu_media_select);
+
+				menu.MenuItemClick += (s1, arg1) => {
+					System.Console.WriteLine ("{0} selected", arg1.Item.TitleFormatted);
+
+					switch (arg1.Item.TitleFormatted.ToString ()) {
+					case "Photo":
+						StartActivityForResult (new Intent (this, typeof(CameraInputActivity)), 69);
+						break;
+					case "Voice":
+						StartActivityForResult (new Intent (this, typeof(VoiceInputActivity)), 70);
+						break;
+					default:
+						break;
+					
+					}
+				};
+
+				// Android 4 now has the DismissEvent
+				menu.DismissEvent += (s2, arg2) => {
+					System.Console.WriteLine ("menu dismissed"); 
+				};
+
+				menu.Show ();
+			};
+			testID = "1156999";
 			_doneButton.Click += async delegate(object sender, EventArgs e) {
 				string result = await HttpPost (
 					                "http://tachitnow.com/api/link",
@@ -162,42 +221,19 @@ namespace QRC_phase1
 				}
 
 				HandleScanResult ("upload success");
-				var uri = Android.Net.Uri.Parse ("http://tachitnow.com/1126021");
+				var uri = Android.Net.Uri.Parse ("http://tachitnow.com/" + testID);
 				var intent = new Intent (Intent.ActionView, uri); 
 				StartActivity (intent);  
 			};
-//			_doneButton.Click += (object sender, EventArgs e) => {
-//
-//				var intent = new Intent (this, typeof(FinishActivity));
-//				StartActivity (intent);
-//			};
 
 		}
 
 		private string ConstructRequestArrayFromData ()
 		{
-//			JsonObject JO = new JsonObject ();
-//			JO.Add ("link_url", "1126001");
-//			JO.Add ("data", JsonConvert.SerializeObject (dataList));
-			UploadContainer UC = new UploadContainer ("1126021", dataList);
+			UploadContainer UC = new UploadContainer (testID, dataList);
 			string ret = JsonConvert.SerializeObject (UC);
 			System.Console.WriteLine (ret);
 			return ret;
-		}
-
-		private void AddNewImageView (int height, int width)
-		{
-			//make new imageView
-			ImageView newImageView = new ImageView (this);
-			newImageView.Id = View.GenerateViewId ();
-
-			//put it in the layout
-			LinearLayout layoutForScroll = FindViewById<LinearLayout> (Resource.Id.layoutForScroll);
-			layoutForScroll.AddView (newImageView);
-			LinearLayout.LayoutParams ll = new LinearLayout.LayoutParams (width, height);
-			ll.SetMargins (0, 10, 0, 10);
-			newImageView.LayoutParameters = ll;
-			imageViewIdList.Add (newImageView.Id);
 		}
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -205,22 +241,77 @@ namespace QRC_phase1
 			base.OnActivityResult (requestCode, resultCode, data);
 
 			// make it available in the gallery
-			Intent mediaScanIntent = new Intent (Intent.ActionMediaScannerScanFile);
-			Uri contentUri = Uri.FromFile (App._file);
-			mediaScanIntent.SetData (contentUri);
-			SendBroadcast (mediaScanIntent);
+//			Intent mediaScanIntent = new Intent (Intent.ActionMediaScannerScanFile);
+//			Uri contentUri = Uri.FromFile (App._file);
+//			mediaScanIntent.SetData (contentUri);
+//			SendBroadcast (mediaScanIntent);
 
 			//get imageView first
-			ImageView imgView = FindViewById<ImageView> (imageViewIdList.Last ());
+			//ImageView imgView = new ImageView (this);
+			//imgView.Id = View.GenerateViewId ();
 			// display in ImageView. We will resize the bitmap to fit the display
 			// Loading the full sized image will consume to much memory 
 			// and cause the application to crash.
-			int height = Resources.DisplayMetrics.HeightPixels;
-			int width = imgView.Height;
-			App.bitmap = App._file.Path.LoadAndResizeBitmap (width, height);
-			imgView.SetImageBitmap (App.bitmap);
-			_doneButton.Enabled = true;
-			uploadFilePath = App._file.Path;
+			//int height = 83;
+			//int width = 83;
+			//App.bitmap = App._file.Path.LoadAndResizeBitmap (width, height);
+
+			if (requestCode == 69) {
+				IntentProcessor (data);
+			} else {
+
+				((MessageInputAdapter)listView.Adapter).Add (new TableItem () {
+					Heading = "TEST",
+					SubHeading = "TEST2",
+					Image = App.bitmap
+				});
+				((MessageInputAdapter)listView.Adapter).NotifyDataSetChanged ();
+			}
+
+		}
+
+		protected void IntentProcessor (Intent intent)
+		{
+			if (intent == null || intent.GetStringExtra ("MediaSource") == null)
+				return;
+			
+			string returnedMediaSource = intent.GetStringExtra ("MediaSource");
+			Data returnedData = JsonConvert.DeserializeObject<Data> (intent.GetStringExtra ("Data"));
+			UploadInfo returnedUploadInfo = JsonConvert.DeserializeObject<UploadInfo> (intent.GetStringExtra ("UploadInfo"));
+			String returnedResultFilePath = intent.GetStringExtra ("FilePath");
+			if (returnedData != null & returnedUploadInfo != null & returnedResultFilePath != null) {
+				
+				dataList.Add (returnedData);
+				uploadInfoList.Add (returnedUploadInfo);
+				switch (returnedMediaSource) {
+				case "CameraInputActivity":
+					((MessageInputAdapter)listView.Adapter).Add (new TableItem () {
+						Heading = "PICTURE",
+						SubHeading = ("Name: " + returnedData.name),
+						Image = returnedResultFilePath.LoadAndResizeBitmap (83, 83)
+					});
+					((MessageInputAdapter)listView.Adapter).NotifyDataSetChanged ();
+							
+					break;
+				case "voiceInputActivity":
+						
+					((MessageInputAdapter)listView.Adapter).Add (new TableItem () {
+						Heading = "PICTURE",
+						SubHeading = ("Name: " + returnedData.name),
+						Image = null
+					});
+					((MessageInputAdapter)listView.Adapter).NotifyDataSetChanged ();
+							
+					break;
+				default :
+					System.Console.WriteLine ("nothing returned dude!");
+					break;
+
+				}
+
+			}
+			return;
+
 		}
 
 		private void TakeAPicture (object sender, EventArgs eventArgs)
@@ -231,9 +322,6 @@ namespace QRC_phase1
 
 			intent.PutExtra (MediaStore.ExtraOutput, Uri.FromFile (App._file));
 
-			//IMPORTANT SHIT
-			AddNewImageView (200, 300);
-			//IMPORTANT SHIT2
 			dataList.Add (new Data (g.ToString (), "testing", "picture", "eddywang"));
 			uploadInfoList.Add (new UploadInfo (g.ToString (), App._file.Path, ""));
 

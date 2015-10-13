@@ -1,26 +1,40 @@
 ﻿<Properties StartupItem="QRC_phase1\QRC_phase1.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="QRC_phase1\MessageInputActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.LGH8118d60bc73" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="QRC_phase1\Resources\values\Strings.xml">
     <Files>
-      <File FileName="QRC_phase1\Resources\Resource.designer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\Resources\values\Strings.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Resources\values\Strings.xml" Line="7" Column="1" NotebookId="1" />
       <File FileName="QRC_phase1\BitmapHelpers.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="QRC_phase1\FinishActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\TableItem.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\CameraInputActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Resources\menu\popup_menu_media_select.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\VoiceInputActivity.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <FloatingWindows>
-      <FloatingWindow WindowId="1" X="-32000" Y="-32000" Width="1345" Height="1041">
+      <FloatingWindow WindowId="1" X="1249" Y="0" Width="1233" Height="1041">
         <Files>
-          <File FileName="QRC_phase1\MainActivity.cs" Line="57" Column="40" />
-          <File FileName="QRC_phase1\MessageInputActivity.cs" Line="165" Column="67" />
-          <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="379" Column="14" />
+          <File FileName="QRC_phase1\MessageInputActivity.cs" Line="203" Column="18" />
+          <File FileName="QRC_phase1\MainActivity.cs" Line="48" Column="1" />
         </Files>
       </FloatingWindow>
     </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MessageInputActivity.cs" line="65" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MessageInputActivity.cs" line="213" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MessageInputActivity.cs" line="207" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MessageInputActivity.cs" line="178" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MessageInputActivity.cs" line="275" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="56" column="37" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="54" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="53" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="48" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="49" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="45" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.QRC__phase1 MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.QRC__phase1 MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="N5" />
 </Properties>
