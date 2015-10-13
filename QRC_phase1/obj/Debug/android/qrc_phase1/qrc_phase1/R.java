@@ -15,24 +15,41 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int DoneBut=0x7f050009;
-        public static final int FinishHeader=0x7f050000;
-        public static final int MessageBoxHeader=0x7f050004;
-        public static final int ScrlView=0x7f050006;
-        public static final int addPictureBut=0x7f050008;
-        public static final int buttonScanDefaultView=0x7f050002;
-        public static final int contentFrame=0x7f05000a;
-        public static final int layoutForScroll=0x7f050007;
-        public static final int messageBox=0x7f050005;
-        public static final int scannedResultId=0x7f050003;
-        public static final int textView1=0x7f050001;
+        public static final int DoneBut=0x7f06000d;
+        public static final int FinishHeader=0x7f060006;
+        public static final int Image=0x7f060005;
+        public static final int List=0x7f06000c;
+        public static final int PlayBut_inVoiceInput=0x7f060010;
+        public static final int RecordBut_inVoiceInput=0x7f06000e;
+        public static final int StopRecordBut_inVoiceInput=0x7f06000f;
+        public static final int Text=0x7f060002;
+        public static final int Text1=0x7f060003;
+        public static final int Text2=0x7f060004;
+        public static final int addMediaBut=0x7f06000b;
+        public static final int addPictureBut=0x7f06000a;
+        public static final int addPictureBut_inCamInput=0x7f060000;
+        public static final int buttonScanDefaultView=0x7f060008;
+        public static final int cameraInputDoneBut=0x7f060001;
+        public static final int contentFrame=0x7f060012;
+        public static final int item1=0x7f060013;
+        public static final int item2=0x7f060014;
+        public static final int item3=0x7f060015;
+        public static final int scannedResultId=0x7f060009;
+        public static final int textView1=0x7f060007;
+        public static final int voiceInputDoneBut=0x7f060011;
     }
     public static final class layout {
-        public static final int finishlayout=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int messageinputlayout=0x7f030002;
-        public static final int zxingscanneractivitylayout=0x7f030003;
-        public static final int zxingscannerfragmentlayout=0x7f030004;
+        public static final int camerainput=0x7f030000;
+        public static final int customview=0x7f030001;
+        public static final int finishlayout=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int messageinputlayout=0x7f030004;
+        public static final int voiceinput=0x7f030005;
+        public static final int zxingscanneractivitylayout=0x7f030006;
+        public static final int zxingscannerfragmentlayout=0x7f030007;
+    }
+    public static final class menu {
+        public static final int popup_menu_media_select=0x7f050000;
     }
     public static final class string {
         public static final int ApplicationName=0x7f040001;

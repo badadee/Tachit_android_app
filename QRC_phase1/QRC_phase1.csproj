@@ -15,7 +15,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AssemblyName>QRC_phase1</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +73,10 @@
     <Compile Include="MessageInputActivity.cs" />
     <Compile Include="BitmapHelpers.cs" />
     <Compile Include="FinishActivity.cs" />
+    <Compile Include="MessageInputAdapter.cs" />
+    <Compile Include="TableItem.cs" />
+    <Compile Include="CameraInputActivity.cs" />
+    <Compile Include="VoiceInputActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -86,6 +90,13 @@
     <AndroidResource Include="Resources\layout\MessageInputLayout.axml" />
     <AndroidResource Include="Resources\layout\FinishLayout.axml" />
     <AndroidResource Include="Resources\drawable\buttonshape.axml" />
+    <AndroidResource Include="Resources\layout\CustomView.axml" />
+    <AndroidResource Include="Resources\menu\popup_menu_media_select.xml" />
+    <AndroidResource Include="Resources\layout\CameraInput.axml" />
+    <AndroidResource Include="Resources\layout\VoiceInput.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\menu\" />
+  </ItemGroup>
 </Project>
