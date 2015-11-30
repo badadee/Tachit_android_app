@@ -24,8 +24,7 @@ namespace QRC_phase1
 	{
 		Button buttonScanDefaultView;
 		MobileBarcodeScanner scanner;
-		TextView responseText;
-		String amazonPostUrl;
+
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -35,7 +34,7 @@ namespace QRC_phase1
 			SetContentView (Resource.Layout.Main);
 
 			//Create a new instance of our Scanner
-			scanner = new MobileBarcodeScanner (this);
+			scanner = new MobileBarcodeScanner ();
 
 			// Get our button from the layout resource,
 			// and attach an event to it
@@ -121,23 +120,6 @@ namespace QRC_phase1
 		}
 
 
-		private void ParseAndDisplay (JsonValue json)
-		{
-			JsonValue result = json ["result"];
-			responseText.Text = result.ToString ();
-		}
-
-		void HandleScanResult (ZXing.Result result)
-		{
-			string msg = "";
-
-			if (result != null && !string.IsNullOrEmpty (result.Text))
-				msg = "Found Barcode: " + result.Text;
-			else
-				msg = "Scanning Canceled!";
-
-			this.RunOnUiThread (() => Toast.MakeText (this, msg, ToastLength.Short).Show ());
-		}
 	}
 }
 

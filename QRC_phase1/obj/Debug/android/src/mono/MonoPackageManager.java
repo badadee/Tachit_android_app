@@ -80,13 +80,10 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"QRC_phase1.dll",
-		"AWSSDK_XMOBILE.dll",
 		"Newtonsoft.Json.dll",
-		"System.Net.Http.Extensions.dll",
-		"System.Net.Http.Primitives.dll",
 		"Xamarin.Android.Support.v4.dll",
-		"zxing.monoandroid.dll",
-		"ZXing.Net.Mobile.dll",
+		"zxing.portable.dll",
+		"ZXingNetMobile.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
 		"System.ComponentModel.Annotations.dll",

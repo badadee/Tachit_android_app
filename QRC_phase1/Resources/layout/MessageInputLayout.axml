@@ -15,10 +15,14 @@
         android:id="@+id/scannedResultId"
         android:text="@string/scannedResult" />
     <Button
-        android:text="Add Picture"
+        android:text="Add Picture (TESTING ONLY)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/addPictureBut" />
+        android:id="@+id/addPictureBut"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:visibility="visible"
+        android:enabled="false"
+        android:layout_marginRight="0.0dp" />
 <!--    <ScrollView
         android:id="@+id/ScrlView"
         android:layout_width="fill_parent"

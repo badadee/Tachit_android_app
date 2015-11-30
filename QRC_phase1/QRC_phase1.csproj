@@ -9,7 +9,7 @@
     <RootNamespace>QRC_phase1</RootNamespace>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -42,28 +42,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>bin\Debug\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="zxing.monoandroid">
-      <HintPath>bin\Debug\zxing.monoandroid.dll</HintPath>
-    </Reference>
-    <Reference Include="ZXing.Net.Mobile">
-      <HintPath>bin\Debug\ZXing.Net.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="System.Json" />
-    <Reference Include="AWSSDK_XMOBILE">
-      <HintPath>..\..\..\..\Downloads\aws-sdk-xamarin-master\aws-sdk-xamarin-master\Compiled Binaries_Assemblies\Android\AWSSDK_XMOBILE.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\..\..\..\Downloads\aws-sdk-xamarin-master\aws-sdk-xamarin-master\Compiled Binaries_Assemblies\Android\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\..\..\..\Downloads\aws-sdk-xamarin-master\aws-sdk-xamarin-master\Compiled Binaries_Assemblies\Android\System.Net.Http.Primitives.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\Downloads\Json60r8\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\Components\zxing.net.mobile-1.5.1.0\lib\android\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\Components\zxing.net.mobile-1.5.1.0\lib\android\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +73,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -98,5 +90,15 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="zxing.net.mobile">
+      <Version>1.5.1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
