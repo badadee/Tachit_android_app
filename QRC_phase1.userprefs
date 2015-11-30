@@ -1,24 +1,17 @@
 ﻿<Properties StartupItem="QRC_phase1\QRC_phase1.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.LGH8118d60bc73" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="QRC_phase1\Resources\values\Strings.xml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA0980NSWO" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="QRC_phase1\MainActivity.cs">
     <Files>
-      <File FileName="QRC_phase1\Resources\values\Strings.xml" Line="7" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\BitmapHelpers.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\FinishActivity.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\TableItem.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\CameraInputActivity.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\Resources\menu\popup_menu_media_select.xml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" NotebookId="1" />
-      <File FileName="QRC_phase1\VoiceInputActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="QRC_phase1\Resources\values\Strings.xml" Line="1" Column="1" />
+      <File FileName="QRC_phase1\BitmapHelpers.cs" Line="1" Column="1" />
+      <File FileName="QRC_phase1\FinishActivity.cs" Line="1" Column="1" />
+      <File FileName="QRC_phase1\TableItem.cs" Line="1" Column="1" />
+      <File FileName="QRC_phase1\CameraInputActivity.cs" Line="1" Column="1" />
+      <File FileName="QRC_phase1\Resources\menu\popup_menu_media_select.xml" Line="1" Column="1" />
+      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="QRC_phase1\VoiceInputActivity.cs" Line="1" Column="1" />
+      <File FileName="QRC_phase1\MainActivity.cs" Line="45" Column="1" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1249" Y="0" Width="1233" Height="1041">
-        <Files>
-          <File FileName="QRC_phase1\MessageInputActivity.cs" Line="203" Column="18" />
-          <File FileName="QRC_phase1\MainActivity.cs" Line="48" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -33,6 +26,19 @@
       <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="48" column="1" />
       <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="49" column="1" />
       <Breakpoint file="C:\Users\Eddy\Documents\Projects\QRC_phase1\QRC_phase1\MainActivity.cs" line="45" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="275" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="178" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="144" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="139" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="134" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="124" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MessageInputActivity.cs" line="129" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="45" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="47" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="49" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="55" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="57" column="1" />
+      <Breakpoint file="C:\Users\Eddy\Documents\Projects\Tachit_android\QRC_phase1\MainActivity.cs" line="31" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

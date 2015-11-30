@@ -26,8 +26,6 @@ namespace QRC_phase1
 		
 		public static void UpdateIdValues()
 		{
-			global::AWSSDK_XMOBILE.Resource.String.ApplicationName = global::QRC_phase1.Resource.String.ApplicationName;
-			global::AWSSDK_XMOBILE.Resource.String.Hello = global::QRC_phase1.Resource.String.Hello;
 			global::ZXing.Mobile.Resource.Id.contentFrame = global::QRC_phase1.Resource.Id.contentFrame;
 			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::QRC_phase1.Resource.Layout.zxingscanneractivitylayout;
 			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::QRC_phase1.Resource.Layout.zxingscannerfragmentlayout;
@@ -201,19 +199,13 @@ namespace QRC_phase1
 		{
 			
 			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			public const int app_name = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
-			
-			// aapt resource value: 0x7f040003
-			public const int app_name = 2130968579;
+			public const int hello = 2130968576;
 			
 			// aapt resource value: 0x7f040002
-			public const int hello = 2130968578;
-			
-			// aapt resource value: 0x7f040004
-			public const int scannedResult = 2130968580;
+			public const int scannedResult = 2130968578;
 			
 			static String()
 			{
