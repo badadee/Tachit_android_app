@@ -21,6 +21,8 @@ using System.Json;
 using Android.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using RestSharp;
+
 
 namespace QRC_phase1
 {
@@ -46,12 +48,28 @@ namespace QRC_phase1
 
 		public string user_name { get; set; }
 
+		public string final { get; set; }
+
+		public string fieldfilename { get; set; }
+
 		public Data (string n, string d, string mt, string un)
 		{
 			this.name = n;
 			this.description = "testing";
 			this.media_type = mt;
 			this.user_name = "eddywang";
+			this.final = "false";
+			this.fieldfilename = n;
+		}
+
+		public Data (string n, string d, string mt, bool isFinal, string un)
+		{
+			this.name = n;
+			this.description = "testing";
+			this.media_type = mt;
+			this.final = (isFinal) ? "true" : "false";
+			this.user_name = "eddywang";
+			this.fieldfilename = n;
 		}
 	}
 
@@ -207,7 +225,7 @@ namespace QRC_phase1
 				string result = await HttpPost (
 					                "http://tachitnow.com/api/link",
 					                ConstructRequestArrayFromData () //JsonObject
-				                );
+				                ); 
 				JObject resultJson = JObject.Parse (result);
 				IList<JToken> resultList = resultJson ["result"].ToList ();
 				foreach (JToken item in resultList) {
@@ -385,7 +403,19 @@ namespace QRC_phase1
 
 		}
 
+		private static async Task<string> HttpPostMultipart (string url, string jsonString, List<UploadInfo> uploadInfoList)
+		{
+			var client = new RestClient("http://tachitnow.com");
+			var request = new RestRequest ("api/preview", Method.POST);
+			request.AddParameter ("link_url", url);
+			request.AddParameter ("data", jsonString);
+			request.AddFile (uploadInfoList [0].name, uploadInfoList [0].uploadFilePath);
+			client.ExecuteAsync (request, response => {
+				System.Console.WriteLine(response.Content);
+				return response.Content;
+			});
 
+		}
 		private bool IsThereAnAppToTakePictures ()
 		{
 			Intent intent = new Intent (MediaStore.ActionImageCapture);

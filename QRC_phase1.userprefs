@@ -8,7 +8,7 @@
       <File FileName="QRC_phase1\TableItem.cs" Line="1" Column="1" />
       <File FileName="QRC_phase1\CameraInputActivity.cs" Line="1" Column="1" />
       <File FileName="QRC_phase1\Resources\menu\popup_menu_media_select.xml" Line="1" Column="1" />
-      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="QRC_phase1\Properties\AndroidManifest.xml" Line="11" Column="12" />
       <File FileName="QRC_phase1\VoiceInputActivity.cs" Line="1" Column="1" />
       <File FileName="QRC_phase1\MainActivity.cs" Line="45" Column="1" />
     </Files>

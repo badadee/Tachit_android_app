@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <AdditionalAndroidResourcePaths>C:\Users\Eddy\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded</AdditionalAndroidResourcePaths>
-  <AdditionalJavaLibraryReferences>C:\Users\Eddy\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded\classes.jar;C:\Users\Eddy\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded\libs\internal_impl-22.2.1.jar</AdditionalJavaLibraryReferences>
-  <AdditionalNativeLibraryReferences></AdditionalNativeLibraryReferences>
+  <AdditionalAndroidResourcePaths>
+    <AdditionalAndroidResourcePath>C:\Users\HG\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded</AdditionalAndroidResourcePath>
+  </AdditionalAndroidResourcePaths>
+  <AdditionalJavaLibraryReferences>
+    <AdditionalJavaLibraryReference>C:\Users\HG\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded\classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>C:\Users\HG\AppData\Local\Xamarin\Android.Support.v4\22.2.1\embedded\libs\internal_impl-22.2.1.jar</AdditionalJavaLibraryReference>
+  </AdditionalJavaLibraryReferences>
+  <AdditionalNativeLibraryReferences />
 </Paths>

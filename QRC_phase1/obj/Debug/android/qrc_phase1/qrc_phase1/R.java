@@ -44,9 +44,10 @@ public final class R {
         public static final int finishlayout=0x7f030002;
         public static final int main=0x7f030003;
         public static final int messageinputlayout=0x7f030004;
-        public static final int voiceinput=0x7f030005;
-        public static final int zxingscanneractivitylayout=0x7f030006;
-        public static final int zxingscannerfragmentlayout=0x7f030007;
+        public static final int previewlayout=0x7f030005;
+        public static final int voiceinput=0x7f030006;
+        public static final int zxingscanneractivitylayout=0x7f030007;
+        public static final int zxingscannerfragmentlayout=0x7f030008;
     }
     public static final class menu {
         public static final int popup_menu_media_select=0x7f050000;
